@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .feedback-form-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .feedback-form-container p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .feedback-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .feedback-form select,
+        .feedback-form textarea,
+        .feedback-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .feedback-form textarea {
+            resize: none;
+        }
+
+        .feedback-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .feedback-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-form-container">
+        <p>We Value Your Opinion</p>
+        <form id="feedback-form" class="feedback-form">
+            <label for="video-content">1. How was the video content?</label>
+            <select id="video-content" name="video-content" required>
+                <option value="" disabled selected>Choose an option</option>
+                <option value="Very Poor">Very Poor</option>
+                <option value="Poor">Poor</option>
+                <option value="Average">Average</option>
+                <option value="Good">Good</option>
+                <option value="Excellent">Excellent</option>
+            </select>
+
+            <label for="audio-content">2. How was the audio content?</label>
+            <select id="audio-content" name="audio-content" required>
+                <option value="" disabled selected>Choose an option</option>
+                <option value="Very Poor">Very Poor</option>
+                <option value="Poor">Poor</option>
+                <option value="Average">Average</option>
+                <option value="Good">Good</option>
+                <option value="Excellent">Excellent</option>
+            </select>
+
+            <label for="clarity">3. How clear was the course content?</label>
+            <select id="clarity" name="clarity" required>
+                <option value="" disabled selected>Choose an option</option>
+                <option value="Very Poor">Very Poor</option>
+                <option value="Poor">Poor</option>
+                <option value="Average">Average</option>
+                <option value="Good">Good</option>
+                <option value="Excellent">Excellent</option>
+            </select>
+
+            <label for="engagement">4. How engaging was the course?</label>
+            <select id="engagement" name="engagement" required>
+                <option value="" disabled selected>Choose an option</option>
+                <option value="Very Poor">Very Poor</option>
+                <option value="Poor">Poor</option>
+                <option value="Average">Average</option>
+                <option value="Good">Good</option>
+                <option value="Excellent">Excellent</option>
+            </select>
+
+            <label for="recommend">5. Would you recommend this course?</label>
+            <select id="recommend" name="recommend" required>
+                <option value="" disabled selected>Choose an option</option>
+                <option value="Very Poor">Very Poor</option>
+                <option value="Poor">Poor</option>
+                <option value="Average">Average</option>
+                <option value="Good">Good</option>
+                <option value="Excellent">Excellent</option>
+            </select>
+
+            <label for="additional-feedback">Additional Feedback:</label>
+            <textarea id="additional-feedback" name="additional-feedback" rows="4" placeholder="Your comments..."></textarea>
+
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+    </div>
+
+    <!-- Script for Feedback Form Submission -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwbYl6o20aWIyzQ2iimF_-nQ-Nl7HNR_tZMJmdANVDU0nXcm2xIXa3YDkZq_-BOOkjB/exec';
+        const form = document.getElementById('feedback-form');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(() => {
+                    Swal.fire({
+                        title: 'Thank You!',
+                        text: 'Your feedback has been submitted successfully.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then(() => {
+                        alert('Redirecting to certificate page...');
+                        form.reset(); // Reset the form after successful submission
+                        window.location.href = '/certificate'; // Redirect to the certificate page
+                    });
+                })
+                .catch((error) => {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'There was a problem submitting your feedback. Please try again later.',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                    console.error('Error!', error.message);
+                });
+        });
+    </script>
+</body>
+</html>

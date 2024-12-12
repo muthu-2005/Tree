@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Effects of Doping</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/@google/model-viewer"></script>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #ff0000;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      background: linear-gradient(135deg, #3deac8, #bff7eb 80%);
+      text-align: center;
+      padding: 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: white;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 0;
+      color: #ffedd5;
+    }
+
+    .container {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 48%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #ff7a18;
+    }
+
+    .section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .chart-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .video-container {
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff7a18;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background-color: #af002d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #3deac8, #bff7eb 80%);
+        }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Background Animation Styles */
+    .background-left, .background-right {
+      position: absolute;
+      top: 0;
+      width: 10%;
+      height: 100%;
+      background: linear-gradient(135deg, #3deac8, #bff7eb 80%);
+      animation: moveBackground 3s ease-in-out infinite;
+    }
+
+    .background-left {
+      left: 0;
+    }
+
+    .background-right {
+      right: 0;
+    }
+
+    @keyframes moveBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .button {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  text-decoration: none; /* Remove the default underline */
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+  </style>
+</head>
+<body>
+  <!-- Background Animation -->
+  <div class="background-left"></div>
+  <div class="background-right"></div>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Health Effects of Doping</h1>
+    <p>Understanding the consequences of doping on the human body</p>
+  </header>
+
+
+  <br><center>
+    <a href="/prohbit" class="button">Prohibited Drugs</a></center>
+  <br>
+  <!-- Content Section -->
+  <div class="container">
+    <!-- Cardiovascular Effects -->
+    <div class="section">
+      <h2>1. Cardiovascular Effects</h2>
+      <p>
+        Doping substances, like anabolic steroids and EPO, severely affect the cardiovascular system. These drugs can lead to thickened blood, increasing the risk of heart attacks, strokes, and sudden cardiac death.
+      </p>
+      <div class="video-container">
+        <iframe width="560" height="330" src="https://www.youtube.com/embed/xAQawqZp_Rc?si=I3kq6LS2sI1qvG6O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
+    </div>
+
+    <!-- Liver Damage -->
+    <div class="section">
+      <h2>2. Liver Damage</h2>
+      <p>
+        Steroids and oral enhancers heavily tax the liver, leading to liver failure or cancer in severe cases. Prolonged use of these substances stresses the liver, leading to liver toxicity, an increased risk of liver tumors and cancer, jaundice, and cholestasis (disruption of bile flow). The liver's ability to filter toxins is compromised, and this damage can result in long-term health complications, including liver failure. These risks underline the dangers of doping for individuals seeking to enhance performance.
+        <img src="https://www.thelancet.com/cms/10.1016/S2468-1253(20)30006-6/asset/8799f4e7-a753-408d-9756-7814535e1ff9/main.assets/gr1_lrg.jpg" alt="Image" width="560" height="315" />
+    </p>
+      <model-viewer
+        src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+        alt="Liver Model"
+        ar
+        auto-rotate
+        camera-controls>
+      </model-viewer>
+    </div>
+
+    <!-- Muscle Damage -->
+    <div class="section">
+        <h2>3. Muscle damage</h2>
+        <p>
+          While steroids may promote rapid muscle growth initially, they lead to muscle atrophy once discontinued, as the body adapts to artificial hormonal support. The imbalance between muscle growth and the strength of tendons and ligaments increases the risk of injuries, including tendon damage and muscle ruptures. Steroids also disrupt natural hormonal production, impairing muscle recovery and repair, which can lead to chronic fatigue and delayed healing.
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/itEXhxjOPjk?si=ItlxA0iSfS9NvAmc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+      </p>
+        <model-viewer
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          alt="Liver Model"
+          ar
+          auto-rotate
+          camera-controls>
+        </model-viewer>
+      </div>
+
+    <!-- Neurological Damage -->
+    <div class="section">
+      <h2>4. Neurological Damage</h2>
+      <p>
+        Stimulants and steroids can cause neurotoxicity, mood swings, and permanent cognitive impairments. These substances are known to induce depression, aggression, and even psychosis.
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ApPXAFwZqx8?si=Mhc65uxW22JyO7a_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    </p>
+    </div>
+
+    <!-- Dynamic Chart: Most Common Substances Used in Doping -->
+    <div class="section">
+      <h2>5. Common Doping Substances</h2>
+      <p>
+        This chart shows the most commonly abused substances in sports and their usage statistics.
+      </p>
+      <div class="chart-container">
+        <canvas id="dopingChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© DOPESHIELD. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Dynamic Chart.js Example
+    const ctx = document.getElementById('dopingChart').getContext('2d');
+    const dopingChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Steroids', 'EPO', 'Stimulants', 'HGH', 'Blood Doping'],
+        datasets: [{
+          label: 'Percentage of Usage',
+          data: [40, 25, 20, 10, 5],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
