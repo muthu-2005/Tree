@@ -1,18 +1,35 @@
+
+import os
+import json
+import secrets
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 import firebase_admin
 from firebase_admin import credentials, auth, db
 import secrets
 import bcrypt  # Import bcrypt for password hashing
+import bcrypt
 from datetime import datetime
-import phonenumbers
+import os
+import json
 # Initialize the Flask app
 app = Flask(__name__)
 
-# Generate a secure random secret key (or you can use an environment variable)
-app.secret_key = secrets.token_hex(16)  # Generates a 32-character hex string
 
+# Reconstruct Firebase JSON from environment variables
+firebase_config = {
+    "type": os.getenv("type"),
+    "project_id": os.getenv("project_id"),
+    "private_key_id": os.getenv("private_key_id"),
+    "private_key": os.getenv("private_key").replace("\\n", "\n"),
+    "client_email": os.getenv("client_email"),
+    "client_id": os.getenv("client_id"),
+    "auth_uri": os.getenv("auth_uri"),
+    "token_uri": os.getenv("token_uri"),
+    "auth_provider_x509_cert_url": os.getenv("auth_provider_x509_cert_url"),
+    "client_x509_cert_url": os.getenv("client_x509_cert_url")
+}
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate('pass1.json')  # Update with the path to your service account file
+cred = credentials.Certificate(firebase_config)  # Update with the path to your service account file
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://sih-2024-2a4a1-default-rtdb.firebaseio.com/'  # Your Firebase Realtime Database URL
 })
