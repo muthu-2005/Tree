@@ -196,7 +196,7 @@ export default {
 }
 ```
 
-##🧪 Running Locally
+## 🧪 Running Locally
 
 ```bash
 cd src
