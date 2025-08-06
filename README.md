@@ -194,8 +194,9 @@ export default {
 * {
   @apply transition-all duration-200;
 }
+```
 
-### 🧪 Running Locally
+##🧪 Running Locally
 
 ```bash
 cd src
