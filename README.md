@@ -28,8 +28,8 @@ A modern full-stack healthcare platform that allows users to find doctors and sp
 
 **Tech Stack:**
 - **Frontend:** React, TypeScript, Vite
-- **Backend:** Python, Flask, SQLAlchemy, spaCy
-- **Database:** PostgreSQL (or SQLite in dev)
+- **Backend:** Python, Flask, SQLAlchemy
+- **Database:** PostgreSQL 
 - **Deployment:** Docker + docker-compose
 
 ---
