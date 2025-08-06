@@ -7,10 +7,10 @@ A modern full-stack healthcare platform that allows users to find doctors and sp
 
 ## 📌 Table of Contents
 
-1. [Project Overview](#project-overview)
-2. [Project Structure](#project-structure)
-3. [Getting Started (Dev Setup)](#getting-started-dev-setup)
-4. [Backend Guide (Flask)](#backend-guide-flask)
+1. [Project Overview](##project-overview)
+2. [Project Structure](##project-structure)
+3. [Getting Started (Dev Setup)](##getting-started-dev-setup)
+4. [Backend Guide (Flask)](##backend-guide-flask)
 5. [Frontend Guide (React + Vite)](#frontend-guide-react--vite)
 6. [Docker Guide](#docker-guide)
 7. [Environment Configuration](#environment-configuration)
@@ -19,7 +19,7 @@ A modern full-stack healthcare platform that allows users to find doctors and sp
 10. [Troubleshooting](#troubleshooting)
 
 ---
-
+<a id="project-overview"></a>
 ## 📖 Project Overview
 
 **OnlyMedChoice** is a full-stack healthcare search engine that allows patients to:
