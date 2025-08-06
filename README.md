@@ -13,7 +13,7 @@ A modern full-stack healthcare platform that allows users to find doctors and sp
 4. [Backend Guide (Flask)](#backend-guide-flask)
 5. [Frontend Guide (React + Vite)](#frontend-guide-react--vite)
 6. [Tailwind Configuration](#tailwind)
-7. [Docker Guide](#docker-guide)
+7. [Docker Guide](#docker)
 8. [Environment Configuration](#environ)
 ---
 <a id="project-overview"></a>
@@ -214,7 +214,7 @@ Backend runs on:
 
 
 ---
-
+<a id="docker"></a>
 ## 🐳 Docker Guide
 
 ### docker-compose.yml Highlights
