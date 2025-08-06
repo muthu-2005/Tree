@@ -152,6 +152,49 @@ npm run dev
 | `FilterSidebar.tsx`         | Search filters                   |
 | `useProviderSearch.ts`      | Hook for calling backend search  |
 
+
+## 🎨 Tailwind Configuration
+
+Tailwind CSS is already integrated with **Vite + React**.
+
+---
+
+### 1️⃣ `tailwind.config.js`
+
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#0ea5e9',  // Sky blue for healthcare branding
+        secondary: '#10b981', // Green accents
+      },
+      borderRadius: {
+        '2xl': '1rem',
+      },
+    },
+  },
+  plugins: [],
+}
+```
+
+### 2️⃣ `index.css`
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom smooth transitions */
+* {
+  @apply transition-all duration-200;
+}
+
 ### 🧪 Running Locally
 
 ```bash
