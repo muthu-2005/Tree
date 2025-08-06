@@ -7,7 +7,7 @@ A modern full-stack healthcare platform that allows users to find doctors and sp
 
 ## 📌 Table of Contents
 
-1. [Project Overview](##project-overview)
+1. [Project Overview](#project-overview)
 2. [Project Structure](##project-structure)
 3. [Getting Started (Dev Setup)](##getting-started-dev-setup)
 4. [Backend Guide (Flask)](##backend-guide-flask)
