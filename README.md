@@ -204,9 +204,9 @@ docker-compose up --build
 
 ```python
 import os
-
-SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL", "sqlite:///providers.db")
+SQLALCHEMY_DATABASE_URI = 'postgresql://<username>:<password>@localhost/<dbname>'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
+
 ```
 
 
