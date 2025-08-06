@@ -8,16 +8,13 @@ A modern full-stack healthcare platform that allows users to find doctors and sp
 ## 📌 Table of Contents
 
 1. [Project Overview](#project-overview)
-2. [Project Structure](##project-structure)
-3. [Getting Started (Dev Setup)](##getting-started-dev-setup)
-4. [Backend Guide (Flask)](##backend-guide-flask)
+2. [Project Structure](#project-structure)
+3. [Getting Started (Dev Setup)](#getting-started-dev-setup)
+4. [Backend Guide (Flask)](#backend-guide-flask)
 5. [Frontend Guide (React + Vite)](#frontend-guide-react--vite)
-6. [Docker Guide](#docker-guide)
-7. [Environment Configuration](#environment-configuration)
-8. [NER + Provider Search Flow](#ner--provider-search-flow)
-9. [Production Notes](#production-notes)
-10. [Troubleshooting](#troubleshooting)
-
+6. [Tailwind Configuration](#tailwind)
+7. [Docker Guide](#docker-guide)
+8. [Environment Configuration](#environ)
 ---
 <a id="project-overview"></a>
 ## 📖 Project Overview
@@ -36,7 +33,7 @@ A modern full-stack healthcare platform that allows users to find doctors and sp
 - **Deployment:** Docker + docker-compose
 
 ---
-
+<a id="project-structure"></a>
 ## 📁 Project Structure
 
 ```
@@ -81,7 +78,7 @@ OnlyMedChoice/
 ```
 
 ---
-
+<a id="getting-started-dev-setup"></a>
 ## 🚀 Getting Started (Dev Setup)
 
 ### 🔧 Prerequisites
@@ -126,7 +123,7 @@ npm run dev
 ```
 
 ---
-
+<a id="backend-guide-flask"></a>
 ## 🔧 Backend Guide (Flask)
 
 ### 🔗 API Routes
@@ -139,7 +136,7 @@ npm run dev
 | `/config`                |POST, PUT    | Create or update brand logo config       |
 
 ---
-
+<a id="frontend-guide-react--vite"></a>
 ## 🎨 Frontend Guide (React + Vite)
 
 ### 🔧 Components
@@ -152,7 +149,7 @@ npm run dev
 | `FilterSidebar.tsx`         | Search filters                   |
 | `useProviderSearch.ts`      | Hook for calling backend search  |
 
-
+<a id="tailwind"></a>
 ## 🎨 Tailwind Configuration
 
 Tailwind CSS is already integrated with **Vite + React**.
@@ -241,7 +238,7 @@ docker-compose up --build
 ```
 
 ---
-
+<a id="environ"></a>
 ## ⚙️ Environment Configuration
 
 ### 🔧 `backend/config.py`
